@@ -24,6 +24,7 @@ def cargar_clientes():
         return []
  
 def guardar_clientes(clientes):
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     with open(RUTA_JSON, "w", encoding="utf-8") as archivo:
         json.dump(clientes, archivo, indent=4, ensure_ascii=False)
  
